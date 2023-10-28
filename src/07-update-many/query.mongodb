@@ -1,0 +1,18 @@
+
+use('sample_training')
+
+
+db.trips.find()
+// db.trips.updateMany({ usertype: "Subscriber" },
+//     { 
+//         $inc: { "birth year": -3 }
+//     }
+// )
+
+
+// db.trips.updateMany({ "usertype": "Subscriber" },
+//     { 
+//         $set: { "newField": "Siuuu!" }
+//     }
+// )
+

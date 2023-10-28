@@ -1,0 +1,23 @@
+
+use('platzi_store')
+
+
+// update one elemente in array
+// db.inventory.updateOne({ _id: 4 }, {
+//     $push: {
+//         tags: "Compras"
+//     }
+// })
+
+
+
+// update some elements in array
+db.inventory.updateOne({ _id: 4 }, {
+    $push: {
+        tags: {
+            $each: ["Medicina", "Alimentos"]
+        }
+    }
+})
+
+db.inventory.find({ _id: 4 })

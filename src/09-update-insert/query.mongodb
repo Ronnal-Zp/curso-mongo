@@ -1,0 +1,22 @@
+use("platzi_store")
+
+// db.iot.insertOne({
+//     _id: 5,
+//     "sensor": "A001",
+//     "date": "2022-01-03",
+//     "reading": [2000]
+// })
+
+
+// db.iot.updateOne(
+//     { "sensor": "A001", "date": "2022-01-03", },
+//     { $push: {
+//         "reading": 3000
+//     }},
+//     {
+//         upsert: true
+//     }
+// )
+
+
+db.iot.find()
