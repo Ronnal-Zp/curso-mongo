@@ -1,0 +1,43 @@
+use("platzi_store")
+
+
+// Query OR
+// db.inventory.find({
+//     tags: { $in: ["book", "bag"] }
+// })
+
+
+// Query not OR
+db.inventory.find({
+    tags: { $nin: ["book", "bag"] }
+})
+
+
+// with other values
+// db.inventory.find({
+//     qty: { $nin: [30, 20] }
+// })
+
+
+// length of array
+// db.inventory.find({
+//     tags: { $size: 2 }
+// })
+
+
+
+// Query AND
+// db.inventory.find({
+//     tags: { $all: ["bag", "book"] }
+// })
+
+
+// $elemMatch
+db.survey.find({
+    results: {
+        $elemMatch: {
+            product: "xyz",
+            score: { $gte: 7 }
+        }
+    }
+})

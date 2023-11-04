@@ -1,0 +1,9 @@
+use("sample_training")
+
+db.posts
+.find({})
+.projection({
+    "author": 1, 
+    "title": 1,
+    "tags": { $slice: -1 }  
+})

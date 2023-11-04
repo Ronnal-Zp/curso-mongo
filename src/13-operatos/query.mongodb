@@ -1,0 +1,5 @@
+use("platzi_store")
+
+db.iot.find({
+    "date": { $gte: "2022-01-02" }
+})
